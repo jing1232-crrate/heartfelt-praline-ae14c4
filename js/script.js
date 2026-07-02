@@ -112,15 +112,12 @@ const valueSwiper = new Swiper(".valueSwiper", {
 Mouse Glow
 ==========================*/
 
-const hero = document.querySelector(".hero");
 const glow = document.querySelector(".mouse-glow");
 
-hero.addEventListener("mousemove",(e)=>{
+document.addEventListener("mousemove",(e)=>{
 
-    const rect = hero.getBoundingClientRect();
+    glow.style.left = e.clientX + "px";
 
-    glow.style.left = (e.clientX - rect.left) + "px";
-
-    glow.style.top = (e.clientY - rect.top) + "px";
+    glow.style.top = e.clientY + "px";
 
 });
