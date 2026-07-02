@@ -244,13 +244,15 @@ NAVBAR
 
     align-items:center;
 
-    height:90px;
+    height:64px;
 
 }
 
 .logo img{
 
-    height:60px;
+    height:48px;
+
+    transition:.3s;
 
 }
 
@@ -370,11 +372,11 @@ HERO
 
     display:grid;
 
-    grid-template-columns:56% 44%;
+    grid-template-columns:58% 42%;
 
     align-items:center;
 
-    gap:80px;
+    gap:20px;
 
 }
 
@@ -507,45 +509,6 @@ HERO
 
 
 }
-
-.mouse-glow{
-
-    position:fixed;
-
-    top:0;
-    left:0;
-
-    width:700px;
-    height:700px;
-
-    pointer-events:none;
-
-    border-radius:50%;
-
-    background:radial-gradient(circle,
-
-        rgba(123,13,30,.055) 0%,
-
-        rgba(123,13,30,.035) 25%,
-
-        rgba(13,27,42,.02) 50%,
-
-        rgba(13,27,42,.008) 70%,
-
-        transparent 100%
-
-    );
-
-    filter:blur(150px);
-
-    transform:translate(-50%,-50%);
-
-    z-index:9999;
-
-    opacity:.85;
-
-}
-
 .hero-left,
 .hero-right{
 
@@ -625,7 +588,11 @@ FOUNDATION CARD
 
     justify-content:flex-start;
 
-    background:#fff;
+    background:linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #faf7f8 100%
+	);
 
     border:1px solid #E8ECF2;
 
