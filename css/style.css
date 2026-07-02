@@ -316,7 +316,7 @@ HERO
 
     position:relative;
 
-    overflow:hidden;
+    overflow:visible;
 
 }
 
@@ -513,30 +513,36 @@ HERO
     position:fixed;
 
     top:0;
-
     left:0;
 
-    width:380px;
+    width:700px;
+    height:700px;
 
-    height:380px;
+    pointer-events:none;
 
     border-radius:50%;
 
     background:radial-gradient(circle,
-        rgba(123,13,30,.18) 0%,
-        rgba(123,13,30,.08) 40%,
-        transparent 70%
+
+        rgba(123,13,30,.055) 0%,
+
+        rgba(123,13,30,.035) 25%,
+
+        rgba(13,27,42,.02) 50%,
+
+        rgba(13,27,42,.008) 70%,
+
+        transparent 100%
+
     );
 
-    pointer-events:none;
-
-    filter:blur(72px);
+    filter:blur(150px);
 
     transform:translate(-50%,-50%);
 
-    transition:transform .08s linear;
+    z-index:9999;
 
-    z-index:0;
+    opacity:.85;
 
 }
 
@@ -1642,7 +1648,9 @@ grid-template-columns:1fr;
 
 .hero{
 
-padding-top:140px;
+    position:relative;
+
+    overflow:visible;
 
 }
 

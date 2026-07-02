@@ -114,10 +114,29 @@ Mouse Glow
 
 const glow = document.querySelector(".mouse-glow");
 
+let mouseX = 0;
+let mouseY = 0;
+
+let currentX = 0;
+let currentY = 0;
+
 document.addEventListener("mousemove",(e)=>{
 
-    glow.style.left = e.clientX + "px";
-
-    glow.style.top = e.clientY + "px";
+    mouseX = e.clientX;
+    mouseY = e.clientY;
 
 });
+
+function animate(){
+
+    currentX += (mouseX-currentX)*0.05;
+    currentY += (mouseY-currentY)*0.05;
+
+    glow.style.left = currentX+"px";
+    glow.style.top = currentY+"px";
+
+    requestAnimationFrame(animate);
+
+}
+
+animate();
