@@ -124,13 +124,17 @@ section{
 
     margin-top:15px;
 
-    font-family:'Playfair Display',serif;
-
+    font-family: 'Manrope', sans-serif;
+	
     color:var(--primary);
 
     font-size:52px;
 
-    line-height:1.2;
+    line-height:1.15;
+
+    font-weight:700;
+
+    letter-spacing:-1px;
 
 }
 
@@ -408,7 +412,7 @@ HERO
 
     line-height:1.08;
 
-    font-family:'Playfair Display',serif;
+    font-family: 'Manrope', sans-serif;
 
     color:var(--primary);
 
@@ -694,7 +698,7 @@ FOUNDATION CARD
 
     margin:12px 0 18px;
 
-    font-family:'Playfair Display',serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
 
     color:var(--primary);
 
@@ -754,7 +758,7 @@ FOUNDATION CARD
 
     text-align:center;
 
-    font-family:'Playfair Display',serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
 
 }
 /*==================================
@@ -765,7 +769,7 @@ CORE VALUE SWIPER
 
     margin-top:50px;
 
-    padding:20px 55px 70px;
+    padding:20px 90px 70px;
 
 }
 
@@ -777,35 +781,77 @@ CORE VALUE SWIPER
 
 .value-card{
 
-    background:#fff;
+    position:relative;
 
-    border:1px solid var(--border);
+    background:linear-gradient(180deg,#FFFFFF 0%,#FAFBFD 100%);
 
-    border-radius:22px;
+    border:1px solid #ECECEC;
 
-    padding:35px 28px;
+    border-radius:24px;
 
-    height:280px;
+    padding:35px;
+
+    height:270px;
+
+    overflow:hidden;
 
     display:flex;
 
     flex-direction:column;
 
-    justify-content:center;
-
-    text-align:center;
-
     transition:.35s;
 
-    box-shadow:0 10px 30px rgba(0,0,0,.04);
+    box-shadow:0 12px 30px rgba(0,0,0,.05);
 
 }
 
-.value-card:hover{
+.value-number{
 
-    transform:translateY(-8px);
+    position:absolute;
 
-    box-shadow:var(--shadow);
+    top:18px;
+
+    right:25px;
+
+    font-size:70px;
+
+    font-weight:700;
+
+    color:#0D1B2A;
+
+    opacity:.05;
+
+    font-family:'Playfair Display',serif;
+
+}
+
+.value-icon{
+
+    width:62px;
+
+    height:62px;
+
+    border-radius:18px;
+
+    background:#F3F6FA;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:24px;
+
+    transition:.35s;
+
+}
+
+.value-icon i{
+
+    color:#7B0D1E;
+
+    font-size:26px;
 
 }
 
@@ -815,26 +861,33 @@ CORE VALUE SWIPER
 
     color:var(--primary);
 
-    margin-bottom:18px;
+    margin-bottom:14px;
 
-    font-family:'Playfair Display',serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
 
 }
 
 .value-card p{
 
-    color:#666;
+    font-size:15px;
 
     line-height:1.8;
 
-    font-size:15px;
+    color:#666;
 
 }
 
-.swiper-button-next,
+
+
+.swiper-button-next{
+
+    right:25px;
+
+}
+
 .swiper-button-prev{
 
-    color:var(--primary);
+    left:25px;
 
 }
 
