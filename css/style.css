@@ -1984,13 +1984,15 @@ ABOUT PAGE
 
 }
 
-
-
 /* ACHIEVEMENT */
 
 .achievement{
 
     background:#0D1B2A;
+
+    position:relative;
+
+    overflow:hidden;
 
 }
 
@@ -2054,42 +2056,252 @@ ABOUT PAGE
 
 }
 
+/* Achievement Moving Light */
 
+.achievement-glow{
 
-/* OUR APPROACH */
+    position:absolute;
 
-.approach{
+    top:0;
 
-    background:white;
+    left:-50%;
+
+    width:50%;
+
+    height:100%;
+
+    background:
+    linear-gradient(
+        120deg,
+        transparent,
+        rgba(0,200,255,.14),
+        transparent
+    );
+
+    filter:blur(40px);
+
+    animation:flowLine 8s ease-in-out infinite;
+
+    pointer-events:none;
+
+    z-index:1;
 
 }
 
 
-.approach-list{
+@keyframes flowLine{
 
-    display:grid;
 
-    grid-template-columns:repeat(3,1fr);
+    0%{
 
-    gap:40px;
+        left:-60%;
+
+    }
+
+
+    100%{
+
+        left:120%;
+
+    }
 
 }
 
 
-.approach-item{
+.achievement .container{
 
     position:relative;
 
-    padding:45px;
-
-    background:#F8F9FB;
-
-    border-radius:26px;
-
-    overflow:hidden;
+    z-index:3;
 
 }
 
+
+.achievement-card{
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+/*==================================================
+OUR APPROACH
+==================================================*/
+
+.approach{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(13,27,42,.025) 25%,
+        transparent 25%
+    ),
+    #fff;
+
+    background-size:40px 40px;
+
+}
+
+
+.approach .container{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+/* timeline */
+
+.approach-list{
+
+    margin-top:70px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:60px;
+
+    position:relative;
+
+}
+
+
+.approach-list::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:0;
+
+    width:2px;
+
+    height:100%;
+
+    background:#E6E9ED;
+
+    transform:translateX(-50%);
+
+}
+
+
+/* card */
+
+.approach-item{
+
+    width:45%;
+
+    position:relative;
+
+    background:#ffffff;
+
+    padding:45px;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(13,27,42,.08);
+
+    box-shadow:
+    0 18px 45px rgba(13,27,42,.10);
+
+    transition:.4s ease;
+
+}
+
+.approach-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:40px;
+
+    width:80px;
+
+    height:5px;
+
+    background:#7B0D1E;
+
+    border-radius:0 0 10px 10px;
+
+}
+
+
+.approach-item:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 30px 70px rgba(13,27,42,.18);
+
+    border-color:rgba(123,13,30,.25);
+
+}
+
+.approach-item:nth-child(odd){
+
+    align-self:flex-start;
+
+}
+
+
+.approach-item:nth-child(even){
+
+    align-self:flex-end;
+
+}
+
+
+/* timeline dot */
+
+.approach-item::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:50%;
+
+    width:22px;
+
+    height:22px;
+
+    background:#7B0D1E;
+
+    border-radius:50%;
+
+}
+
+
+.approach-item:nth-child(odd)::after{
+
+    right:-12.5%;
+
+}
+
+
+.approach-item:nth-child(even)::after{
+
+    left:-12.5%;
+
+}
+
+
+/* number */
 
 .approach-item span{
 
@@ -2129,97 +2341,43 @@ ABOUT PAGE
 
 }
 
-
-
-/* CTA */
+/* ABOUT CTA */
 
 .about-cta{
 
     text-align:center;
 
-    background:#F8F9FB;
+    padding:90px 0;
+
+}
+
+
+.about-cta .container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
 
 }
 
 
 .about-cta h2{
 
-    font-size:48px;
+    font-size:42px;
 
     color:#0D1B2A;
 
-    margin-bottom:35px;
-
-}
-
-/* Achievement Glow */
-
-.achievement{
-
-    position:relative;
-
-    overflow:hidden;
-
-}
-.achievement-glow{
-
-    position:absolute;
-
-    top:0;
-
-    left:-50%;
-
-    width:50%;
-
-    height:100%;
-
-    background:
-    linear-gradient(
-        120deg,
-        transparent,
-        rgba(0,200,255,.18),
-        transparent
-    );
-
-    filter:blur(35px);
-
-    animation:flowLine 7s linear infinite;
-
-    pointer-events:none;
-
-    z-index:1;
+    margin-bottom:30px;
 
 }
 
 
-@keyframes flowLine{
+.about-cta .btn-primary{
 
-    0%{
-
-        left:-60%;
-
-    }
-
-
-    100%{
-
-        left:120%;
-
-    }
-
-}
-.achievement .container{
-
-    position:relative;
-
-    z-index:3;
-
-}
-
-.achievement-card{
-
-    position:relative;
-
-    z-index:5;
+    width:auto;
 
 }

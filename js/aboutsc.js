@@ -64,7 +64,7 @@ if(achievement){
         }
 
     },{
-        threshold:.4
+        threshold:.5
     });
 
 
