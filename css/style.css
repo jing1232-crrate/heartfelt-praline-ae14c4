@@ -86,17 +86,17 @@ COMMON
 
 .container{
 
-    width:90%;
+    width:85%;
 
-    max-width:1280px;
+    max-width:1400px;
 
-    margin:auto;
+    margin:0 auto;
 
 }
 
 section{
 
-    padding:120px 0;
+    padding:100px 0;
 
 }
 
@@ -378,11 +378,22 @@ HERO
 
     display:grid;
 
-    grid-template-columns:58% 42%;
+    grid-template-columns:55% 45%;
 
     align-items:center;
 
-    gap:20px;
+    gap:0;
+
+}
+
+
+.hero-right{
+
+    display:flex;
+
+    justify-content:flex-start;
+
+    margin-left:-80px;
 
 }
 
@@ -1670,36 +1681,6 @@ grid-template-columns:1fr;
 
 }
 
-.hero-right{
-
-    display:flex;
-
-    justify-content:flex-start;
-
-    margin-left:-120px;
-
-}
-
-.hero-wrapper{
-
-    display:grid;
-
-    grid-template-columns:55% 45%;
-
-    gap:0;
-
-    align-items:center;
-
-}
-
-.hero-right img{
-
-max-width:650px;
-
-height:auto;
-
-}
-
 .foundation-image{
 
 position:static;
@@ -1713,6 +1694,7 @@ grid-template-columns:1fr 1fr;
 }
 
 }
+
 
 @media (max-width:992px){
 
@@ -1866,5 +1848,378 @@ border-radius:18px;
     font-size:18px;
 
     font-weight:bold;
+
+}
+
+/*==================================================
+ABOUT PAGE
+==================================================*/
+
+
+/* ABOUT HERO */
+
+.about-hero{
+
+    padding:170px 0 100px;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+        180deg,
+        #ffffff,
+        #F8F9FB
+    );
+
+}
+
+
+.about-hero span{
+
+    color:#7B0D1E;
+
+    font-size:14px;
+
+    font-weight:800;
+
+    letter-spacing:4px;
+
+}
+
+
+.about-hero h1{
+
+    margin-top:25px;
+
+    font-size:70px;
+
+    line-height:1.05;
+
+    color:#0D1B2A;
+
+    font-family:'Manrope',sans-serif;
+
+}
+
+
+.about-hero p{
+
+    margin:30px auto 0;
+
+    max-width:700px;
+
+    color:#666;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+
+
+/* OUR STORY */
+
+.story-wrapper{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+
+.story-image img{
+
+    width:100%;
+
+    height:520px;
+
+    object-fit:cover;
+
+    border-radius:30px;
+
+    box-shadow:0 25px 60px rgba(13,27,42,.12);
+
+}
+
+
+.story-content span{
+
+    color:#7B0D1E;
+
+    font-weight:800;
+
+    letter-spacing:4px;
+
+}
+
+
+.story-content h2{
+
+    margin-top:20px;
+
+    font-size:54px;
+
+    line-height:1.1;
+
+    color:#0D1B2A;
+
+}
+
+
+.story-content p{
+
+    margin-top:25px;
+
+    color:#666;
+
+    line-height:1.9;
+
+    font-size:16px;
+
+}
+
+
+
+/* ACHIEVEMENT */
+
+.achievement{
+
+    background:#0D1B2A;
+
+}
+
+
+.achievement .section-heading h2{
+
+    color:white;
+
+}
+
+
+.achievement-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+
+.achievement-card{
+
+    padding:45px 30px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:24px;
+
+    text-align:center;
+
+    transition:.4s;
+
+}
+
+
+.achievement-card:hover{
+
+    background:rgba(255,255,255,.12);
+
+}
+
+
+.achievement-card h3{
+
+    font-size:48px;
+
+    color:white;
+
+    margin-bottom:15px;
+
+}
+
+
+.achievement-card p{
+
+    color:#ddd;
+
+}
+
+
+
+/* OUR APPROACH */
+
+.approach{
+
+    background:white;
+
+}
+
+
+.approach-list{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:40px;
+
+}
+
+
+.approach-item{
+
+    position:relative;
+
+    padding:45px;
+
+    background:#F8F9FB;
+
+    border-radius:26px;
+
+    overflow:hidden;
+
+}
+
+
+.approach-item span{
+
+    position:absolute;
+
+    right:30px;
+
+    top:20px;
+
+    font-size:80px;
+
+    font-weight:800;
+
+    color:#0D1B2A;
+
+    opacity:.06;
+
+}
+
+
+.approach-item h3{
+
+    font-size:32px;
+
+    color:#0D1B2A;
+
+    margin-bottom:20px;
+
+}
+
+
+.approach-item p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+
+
+/* CTA */
+
+.about-cta{
+
+    text-align:center;
+
+    background:#F8F9FB;
+
+}
+
+
+.about-cta h2{
+
+    font-size:48px;
+
+    color:#0D1B2A;
+
+    margin-bottom:35px;
+
+}
+
+/* Achievement Glow */
+
+.achievement{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+.achievement-glow{
+
+    position:absolute;
+
+    top:0;
+
+    left:-50%;
+
+    width:50%;
+
+    height:100%;
+
+    background:
+    linear-gradient(
+        120deg,
+        transparent,
+        rgba(0,200,255,.18),
+        transparent
+    );
+
+    filter:blur(35px);
+
+    animation:flowLine 7s linear infinite;
+
+    pointer-events:none;
+
+    z-index:1;
+
+}
+
+
+@keyframes flowLine{
+
+    0%{
+
+        left:-60%;
+
+    }
+
+
+    100%{
+
+        left:120%;
+
+    }
+
+}
+.achievement .container{
+
+    position:relative;
+
+    z-index:3;
+
+}
+
+.achievement-card{
+
+    position:relative;
+
+    z-index:5;
 
 }
