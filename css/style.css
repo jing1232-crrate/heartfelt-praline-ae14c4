@@ -326,6 +326,9 @@ HERO
 
     overflow:visible;
 
+    padding-top:120px;
+
+
 }
 
 .hero::before{
@@ -378,11 +381,11 @@ HERO
 
     display:grid;
 
-    grid-template-columns:55% 45%;
+    grid-template-columns:1fr 1fr;
 
     align-items:center;
 
-    gap:0;
+    gap:60px;
 
 }
 
@@ -391,10 +394,17 @@ HERO
 
     display:flex;
 
-    justify-content:flex-start;
+    justify-content:center;
 
-    margin-left:-80px;
+    margin-left:0;
 
+}
+
+.hero-right img{
+    width:100%;
+    max-width:580px;
+    height:620px;
+    object-fit:cover;
 }
 
 .hero-tag{
