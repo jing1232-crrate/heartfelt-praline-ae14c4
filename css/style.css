@@ -3741,3 +3741,244 @@ PHONE
     }
 
 }
+
+@media (max-width:768px){
+
+    .copyright{
+
+        font-size:13px;
+        padding:18px 0;
+
+    }
+
+}
+
+/*==================================================
+ABOUT PAGE RESPONSIVE
+==================================================*/
+
+@media (max-width:991px){
+
+    /* ---------- About Hero ---------- */
+
+    .about-hero{
+
+        padding:120px 0 70px;
+
+    }
+
+    .about-hero h1{
+
+        font-size:52px;
+
+    }
+
+    .about-hero p{
+
+        max-width:90%;
+
+    }
+
+    /* ---------- Story ---------- */
+
+    .story-wrapper{
+
+        grid-template-columns:1fr;
+        gap:50px;
+
+    }
+
+    .story-image{
+
+        order:1;
+
+    }
+
+    .story-content{
+
+        order:2;
+        text-align:center;
+
+    }
+
+    .story-image img{
+
+        height:420px;
+
+    }
+
+    /* ---------- Achievement ---------- */
+
+    .achievement-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    /* ---------- About Hero ---------- */
+
+    .about-hero{
+
+        padding:100px 0 60px;
+
+    }
+
+    .about-hero h1{
+
+        font-size:40px;
+        line-height:1.2;
+
+    }
+
+    .about-hero p{
+
+        font-size:15px;
+
+    }
+
+    /* ---------- Story ---------- */
+
+    .story-image img{
+
+        height:320px;
+        border-radius:20px;
+
+    }
+
+    .story-content h2{
+
+        font-size:34px;
+
+    }
+
+    .story-content p{
+
+        font-size:15px;
+
+    }
+
+    /* ---------- Achievement ---------- */
+
+    .achievement-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .achievement-card{
+
+        padding:35px 25px;
+
+    }
+
+    .achievement-card h3{
+
+        font-size:38px;
+
+    }
+
+    /* ---------- Timeline ---------- */
+
+    .approach-list{
+
+        gap:30px;
+
+    }
+
+    .approach-list::before{
+
+        display:none;
+
+    }
+
+    .approach-item{
+
+        width:100%;
+        align-self:stretch !important;
+        padding:35px 28px;
+
+    }
+
+    .approach-item::after{
+
+        display:none;
+
+    }
+
+    .approach-item span{
+
+        font-size:58px;
+
+    }
+
+    .approach-item h3{
+
+        font-size:24px;
+
+    }
+
+    /* ---------- CTA ---------- */
+
+    .about-cta{
+
+        padding:70px 0;
+
+    }
+
+    .about-cta h2{
+
+        font-size:30px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .about-hero h1{
+
+        font-size:34px;
+
+    }
+
+    .story-image img{
+
+        height:260px;
+
+    }
+
+    .story-content h2{
+
+        font-size:28px;
+
+    }
+
+    .achievement-card{
+
+        padding:30px 22px;
+
+    }
+
+    .achievement-card h3{
+
+        font-size:34px;
+
+    }
+
+    .approach-item{
+
+        padding:28px 22px;
+
+    }
+
+    .approach-item h3{
+
+        font-size:22px;
+
+    }
+
+}
