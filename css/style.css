@@ -4384,39 +4384,36 @@ HAMBURGER MENU
     /* Mobile Menu */
 
     nav{
-    position:fixed;
-    top:0;
-    right:0;
+        position:fixed;
+        top:0;
+        right:0;
 
-    width:300px;
-    max-width:85%;
-    height:100vh;
+        width:300px;
+        max-width:85%;
+        height:100vh;
 
-    display:flex;
-    justify-content:flex-start;
-    align-items:flex-start;
+        background:#0D1B2A;
 
-    padding:95px 35px;
+        transform:translateX(100%);
+        transition:transform .35s ease;
 
-    background:#0D1B2A;
+        opacity:0;
+        visibility:hidden;
 
-    transform:translateX(100%);
-    transition:transform .35s ease;
+        z-index:999;
 
-    opacity:0;
-    visibility:hidden;
+        display:flex;
+        justify-content:flex-start;
+        align-items:flex-start;
 
-    z-index:999;
-}
+        padding:95px 35px;
+    }
 
     nav.active{
-
-    transform:translateX(0);
-
-    opacity:1;
-    visibility:visible;
-
-}
+        transform:translateX(0);
+        opacity:1;
+        visibility:visible;
+    }
 
     nav ul{
 
@@ -4439,19 +4436,8 @@ HAMBURGER MENU
     }
 
     nav a{
-
     display:block;
-
-    width:100%;
-
-    color:white;
-
-    font-size:17px;
-
-    font-weight:600;
-
-    transition:.3s;
-
+    width:auto;
 }
 
 nav a:hover{
