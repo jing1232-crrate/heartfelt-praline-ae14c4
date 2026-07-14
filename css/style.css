@@ -4352,27 +4352,28 @@ HAMBURGER MENU
     .menu-toggle{
 
     display:flex;
-
     align-items:center;
     justify-content:center;
 
+    width:42px;
+    height:42px;
+
+    font-size:22px;
+
     color:#0D1B2A;
 
-    font-size:28px;
+    border-radius:10px;
 
-    cursor:pointer;
-
-    transition:.3s;
-
-	}
+}
 
     /* Navbar */
 
     .nav-container{
 
-        justify-content:space-between;
+    height:72px;
+    padding:0 6px;
 
-    }
+	}
 
     .logo img{
 
