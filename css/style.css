@@ -3584,10 +3584,10 @@ TABLET
         width:100%;
     }
 
-    .btn-primary,
-    .btn-secondary{
-        width:100%;
-    }
+    .hero-buttons .btn-primary,
+	.hero-buttons .btn-secondary{
+    width:100%;
+}
 
     .hero-highlights{
         flex-direction:column;
