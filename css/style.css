@@ -4047,3 +4047,155 @@ ABOUT TIMELINE - MOBILE REDESIGN
     }
 
 }
+
+/*==================================================
+SERVICE PAGE RESPONSIVE
+==================================================*/
+
+@media (max-width:991px){
+
+    .service-hero{
+
+        padding:120px 0 70px;
+
+    }
+
+    .service-hero h1{
+
+        font-size:52px;
+
+    }
+
+    .service-hero h3{
+
+        font-size:24px;
+
+    }
+
+    .service-hero p{
+
+        max-width:90%;
+
+    }
+
+}
+
+@media (max-width:991px){
+
+    .service-info-wrapper{
+
+        grid-template-columns:1fr;
+
+        gap:45px;
+
+    }
+
+    .service-intro{
+
+        position:relati
+		
+		@media (max-width:768px){
+
+    .service-highlight{
+
+        padding:32px;
+
+        border-radius:22px;
+
+    }
+
+    .service-highlight h2{
+
+        font-size:30px;
+
+        margin-bottom:28px;
+
+    }
+
+}ve;
+
+        top:0;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .highlight-item{
+
+        padding:22px 0;
+
+    }
+
+    .highlight-item h3{
+
+        font-size:22px;
+
+    }
+
+    .highlight-item p{
+
+        font-size:15px;
+
+        line-height:1.8;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .service-cta{
+
+        padding:70px 0;
+
+    }
+
+    .service-cta h2{
+
+        font-size:32px;
+
+    }
+
+    .service-cta p{
+
+        font-size:15px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .service-hero{
+
+        padding:100px 0 60px;
+
+    }
+
+    .service-hero h1{
+
+        font-size:34px;
+
+    }
+
+    .service-highlight{
+
+        padding:25px;
+
+    }
+
+    .service-highlight h2{
+
+        font-size:26px;
+
+    }
+
+    .highlight-item h3{
+
+        font-size:20px;
+
+    }
+
+}
