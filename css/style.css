@@ -4306,20 +4306,10 @@ HAMBURGER MENU
 
 .menu-toggle{
 
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
-
-    color:#0D1B2A;
-
-    font-size:28px;
-
-    cursor:pointer;
-
-    transition:.3s;
+    display:none;
 
 }
+
 .menu-overlay{
 
     position:fixed;
@@ -4360,13 +4350,20 @@ HAMBURGER MENU
 
     .menu-toggle{
 
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
     color:#0D1B2A;
 
     font-size:28px;
 
+    cursor:pointer;
+
     transition:.3s;
 
-}
+	}
 
     /* Navbar */
 
