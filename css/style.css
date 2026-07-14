@@ -4384,18 +4384,15 @@ HAMBURGER MENU
     /* Mobile Menu */
 
     nav{
-
     position:fixed;
-
     top:0;
-    right:-100%;
+    right:0;
 
     width:300px;
     max-width:85%;
     height:100vh;
 
     display:flex;
-
     justify-content:flex-start;
     align-items:flex-start;
 
@@ -4403,22 +4400,20 @@ HAMBURGER MENU
 
     background:#0D1B2A;
 
-    box-shadow:-15px 0 45px rgba(0,0,0,.25);
+    transform:translateX(100%);
+    transition:transform .35s ease;
 
-    visibility:hidden;
     opacity:0;
-
-    transition:right .35s ease, opacity .35s ease;
+    visibility:hidden;
 
     z-index:999;
-
 }
+
     nav.active{
 
-    right:0;
+    transform:translateX(0);
 
     opacity:1;
-
     visibility:visible;
 
 }
