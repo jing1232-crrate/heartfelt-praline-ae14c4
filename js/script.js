@@ -108,80 +108,78 @@ const valueSwiper = new Swiper(".valueSwiper", {
 
 });
 const modal = document.getElementById("policyModal");
+const policyLink = document.querySelector(".policy-link");
+const closePolicy = document.querySelector(".close-policy");
 
-document.querySelector(".policy-link").addEventListener("click", function(e){
-    e.preventDefault();
-    modal.style.display = "flex";
-});
+if (modal && policyLink && closePolicy) {
 
-document.querySelector(".close-policy").onclick = function(){
-    modal.style.display = "none";
-};
+    policyLink.addEventListener("click", function(e){
+        e.preventDefault();
+        modal.style.display = "flex";
+    });
 
-window.onclick = function(e){
-    if(e.target === modal){
+    closePolicy.onclick = function(){
         modal.style.display = "none";
-    }
-};
+    };
+
+    window.addEventListener("click", function(e){
+        if(e.target === modal){
+            modal.style.display = "none";
+        }
+    });
+
+}
 
 const form = document.getElementById("contactForm");
 
-form.addEventListener("submit", async function (e) {
+if(form){
 
-    e.preventDefault();
+    form.addEventListener("submit", async function (e) {
 
-    // Required
-    if (!form.checkValidity()) {
-        form.reportValidity();
-        return;
-    }
+        e.preventDefault();
 
-    // Email
-    const email = form.email.value.trim();
+        // Required
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
 
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const email = form.email.value.trim();
 
-    if (!form.checkValidity()) {
+        const data = {
+            name: form.name.value,
+            phone: form.phone.value,
+            email: email,
+            company: form.company.value,
+            position: form.position.value,
+            income: form.income.value,
+            concern: form.concern.value,
+            service: form.service.value,
+            message: form.message.value
+        };
 
-    alert("Please complete the form correctly.");
+        try {
 
-    form.reportValidity();
+            await fetch("https://script.google.com/macros/s/AKfycby9TXXpRul1aDoD_UgRULcQGuEEu0Gpjpy1m0s962xmODL_VonTMG0g3ESbkrRM5FV3/exec", {
+                method: "POST",
+                headers: {
+                    "Content-Type":"text/plain;charset=utf-8"
+                },
+                body: JSON.stringify(data)
+            });
 
-    return;
+            alert("Your enquiry has been submitted successfully!");
+            form.reset();
+
+        } catch(err){
+
+            alert("Submission failed.");
+
+        }
+
+    });
+
 }
-
-    const data = {
-        name: form.name.value,
-        phone: form.phone.value,
-        email: email,
-        company: form.company.value,
-        position: form.position.value,
-        income: form.income.value,
-        concern: form.concern.value,
-        service: form.service.value,
-        message: form.message.value
-    };
-
-    try {
-
-        await fetch("https://script.google.com/macros/s/AKfycby9TXXpRul1aDoD_UgRULcQGuEEu0Gpjpy1m0s962xmODL_VonTMG0g3ESbkrRM5FV3/exec", {
-            method: "POST",
-            headers: {
-                "Content-Type": "text/plain;charset=utf-8"
-            },
-            body: JSON.stringify(data)
-        });
-
-        alert("Your enquiry has been submitted successfully!");
-        form.reset();
-
-    } catch (err) {
-
-        alert("Submission failed.");
-
-    }
-
-});
 
 const menuToggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector("nav");
