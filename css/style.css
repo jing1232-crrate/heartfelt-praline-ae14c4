@@ -4480,3 +4480,19 @@ nav::before{
 }
 
 }
+
+@media (max-width:768px){
+
+    nav{
+        right:0 !important;
+
+        transform:translateX(100%) !important;
+
+        transition:transform .35s ease !important;
+    }
+
+    nav.active{
+        transform:translateX(0) !important;
+    }
+
+}
