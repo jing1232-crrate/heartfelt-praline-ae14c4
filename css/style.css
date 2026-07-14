@@ -251,6 +251,7 @@ NAVBAR
     align-items:center;
 
     height:64px;
+	
 
 }
 
@@ -4369,7 +4370,7 @@ HAMBURGER MENU
 
     .nav-container{
 
-        height:70px;
+        justify-content:space-between;
 
     }
 
@@ -4386,25 +4387,29 @@ HAMBURGER MENU
     position:fixed;
 
     top:0;
-
     right:-100%;
 
     width:300px;
     max-width:85%;
-
     height:100vh;
 
     display:flex;
 
-    visibility:hidden;
+    justify-content:flex-start;
+    align-items:flex-start;
 
-    opacity:0;
+    padding:95px 35px;
 
     background:#0D1B2A;
 
-    transition:
-        right .35s ease,
-        opacity .35s ease;
+    box-shadow:-15px 0 45px rgba(0,0,0,.25);
+
+    visibility:hidden;
+    opacity:0;
+
+    transition:right .35s ease, opacity .35s ease;
+
+    z-index:999;
 
 }
     nav.active{

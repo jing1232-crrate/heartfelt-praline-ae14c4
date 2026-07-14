@@ -50,9 +50,11 @@ behavior:"smooth"
 CORE VALUE SWIPER
 ==========================*/
 
-const valueSwiper = new Swiper(".valueSwiper", {
+if(document.querySelector(".valueSwiper")){
 
-    loop: true,
+    new Swiper(".valueSwiper",{
+
+        loop: true,
 
     speed: 700,
 
@@ -107,6 +109,9 @@ const valueSwiper = new Swiper(".valueSwiper", {
     }
 
 });
+
+}
+    
 const modal = document.getElementById("policyModal");
 const policyLink = document.querySelector(".policy-link");
 const closePolicy = document.querySelector(".close-policy");
