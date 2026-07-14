@@ -327,14 +327,9 @@ HERO
 ==========================*/
 
 .hero{
-
     position:relative;
-
-    overflow:visible;
-
+    overflow:hidden;
     padding-top:120px;
-
-
 }
 
 .hero::before{
@@ -353,7 +348,7 @@ HERO
 
     top:-150px;
 
-    right:-120px;
+    right:0px;
 
     animation:moveGlow 8s ease-in-out infinite;
 
