@@ -182,3 +182,47 @@ form.addEventListener("submit", async function (e) {
     }
 
 });
+
+const menuToggle = document.querySelector(".menu-toggle");
+const menuIcon = menuToggle.querySelector("i");
+const nav = document.querySelector("nav");
+const overlay = document.querySelector(".menu-overlay");
+
+menuToggle.addEventListener("click",()=>{
+
+    nav.classList.toggle("active");
+    overlay.classList.toggle("active");
+
+    if(nav.classList.contains("active")){
+
+        menuIcon.classList.remove("fa-bars");
+        menuIcon.classList.add("fa-xmark");
+
+    }else{
+
+        menuIcon.classList.remove("fa-xmark");
+        menuIcon.classList.add("fa-bars");
+
+    }
+
+});
+
+overlay.addEventListener("click",closeMenu);
+
+document.querySelectorAll("nav a").forEach(link=>{
+
+    link.addEventListener("click",closeMenu);
+
+});
+
+function closeMenu(){
+
+    nav.classList.remove("active");
+
+    overlay.classList.remove("active");
+
+    menuIcon.classList.remove("fa-xmark");
+
+    menuIcon.classList.add("fa-bars");
+
+}
