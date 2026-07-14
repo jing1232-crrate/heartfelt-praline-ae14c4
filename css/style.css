@@ -244,8 +244,6 @@ NAVBAR
 
 }
 
-.nav-container{
-
     .nav-container{
     display:flex;
     justify-content:space-between;
@@ -256,8 +254,6 @@ NAVBAR
     position:relative;
 
     overflow:hidden;
-}
-
 }
 
 .logo img{
@@ -4204,6 +4200,9 @@ HAMBURGER MENU
     position:fixed;
     top:0;
     right:0;
+	
+	left:auto;
+	bottom:0;
 
     width:300px;
     max-width:85vw;
@@ -4211,27 +4210,28 @@ HAMBURGER MENU
 
     background:#0D1B2A;
 
-    display:none;
+    display:flex;          /* ← 改这里 */
+    flex-direction:column;
+
     justify-content:flex-start;
     align-items:flex-start;
 
     padding:95px 35px;
 
-    transform:translate3d(100%,0,0);
-    transition:transform .35s ease;
-
-    will-change:transform;
+    transform:translateX(100%);
 
     visibility:hidden;
+
     pointer-events:none;
 
     z-index:1001;
 }
 
     nav.active{
-    transform:translate3d(0,0,0);
+    transform:translateX(0);
     visibility:visible;
     pointer-events:auto;
+	display:flex;
 }
 
     nav ul{
@@ -4293,18 +4293,3 @@ nav::before{
 
 }
 
-@media (max-width:768px){
-
-    nav{
-        right:0 !important;
-
-        transform:translateX(100%) !important;
-
-        transition:transform .35s ease !important;
-    }
-
-    nav.active{
-        transform:translateX(0) !important;
-    }
-
-}
